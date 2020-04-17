@@ -1,42 +1,174 @@
 /* CUSTOMIZE NAVBAR */
 .navbar {
-    transition: all 0.4s;
+  background-color: #1E025B !important;
+  transition: all 0.4s;
 }
 .navbar-brand{
-  font-size: 1.6em;
-  color: #fed136 !important;
-  font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 1.75em;
 }
 .navbar-brand img{
-  width: 50px;
+  width: 200px;
 }
 .navbar .nav-link{
   /* text-transform: uppercase; */
   color: #fff !important;
 }
 .navbar a:hover{
-   color: #fec503 !important;
+   color: #fff1cf !important;
 }
 .navbar-nav .active a{
-  color: #fed136 !important;
+  color: #ffd369 !important;
 }
 
 /* Change navbar styling on scroll */
-.navbar.active{
-  background-color: #000 !important;
-  transition: background-color 600ms linear;
+.navbar.active .navbar-brand{
+  font-size: 1.25em;
+  transition: all 0.3s;
 }
-
+.navbar.active .navbar-brand img{
+  width: 140px;
+  transition: all 0.3s;
+}
 /* END OF CUSTOMIZE NAVBAR */
 
 /* CUSTOMIZE CAROUSEL */
-.carousel-item img{
+.slider-section .slider-container{
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 7%;
+}
+.slider-section .detail-box{
+  width: 45%;
+  z-index: 4;
+  color: #ffffff;
+}
+.slider-section .detail-box h1{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.slider-section .detail-box p{
+  width: 75%;
+  margin-top: 15px;
+}
+.slider-section .detail-box .slider-link{
+  display: inline-block;
+  padding: 10px 35px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 25px;
+  margin-top: 35px;
+}
+.slider-section .detail-box .slider-link:hover{
+  background-color: #fff;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.slider-section .img-box{
+  width: 100%;
+  margin-left: -17%;
+  position: relative;
+  z-index: 2;
+}
+.slider-section .img-box img{
   width: 100%;
 }
-
-.carousel-item{
+.slider-section .slider-bg-container{
+  position: absolute;
   width: 100%;
-  max-height: 100% !important;
+  height: 100%;
+  background: linear-gradient(135deg, #a454fd, #2b05df);
+  z-index: 3;
+  -webkit-clip-path: polygon(0 0, 60% 0, 37% 100%, 0% 100%);
+          clip-path: polygon(0 0, 60% 0, 37% 100%, 0% 100%);
 }
-
+.slider-section .carousel-control-prev,
+.slider-section .carousel-control-next{
+  left: 47.6%;
+  width: 50px;
+  height: 50px;
+  z-index: 9;
+  background-size: 9px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+  border-radius: 100%;
+}
+.slider-section .carousel-control-prev{
+  background-image: url(/assets/img/prev.png);
+  background-color: #fff;
+  top: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.slider-section .carousel-control-next{
+  background-image: url(/assets/img/next.png);
+  background-color: #2e02fe;
+  top: calc(50% - 30px);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.slider-section .carousel-control-prev:hover{
+  background-color: #fff1cf;
+}
+.slider-section .carousel-control-next:hover{
+  background-color: #ffd369;
+}
 /* END OF CUSTOMIZE CAROUSEL */
+
+/* ABOUT SECTION */
+.about-section{
+  font-family: "Poppins", sans-serif;
+}
+.about-section .row{
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.about-section a{
+  display: inline-block;
+  padding: 8px 25px;
+  background-color: #ffd369;
+  border: 1px solid #ffd369;
+  color: #fff;
+  border-radius: 25px;
+  margin-top: 45px;
+}
+.about-section a:hover{
+  background-color: transparent;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.about-section p{
+  margin-top: 45px;
+}
+.about-section h6{
+  text-transform: uppercase;
+  color: #bdbbbb;
+  font-weight: bold;
+  margin-top: 45px;
+}
+.about-section h2{
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #fff;
+  display: inline;
+  padding-right: 20px;
+}
+.about-section .right-line{
+  background: #ffd369;
+  position: relative;
+  margin-top: -17px;
+  height: 2px;
+  width: 50%;
+  z-index: -1;
+}
+/* END OF ABOUT SECTION */

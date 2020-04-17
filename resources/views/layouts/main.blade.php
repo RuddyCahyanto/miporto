@@ -10,15 +10,9 @@
 
     <!-- Bootstrap -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-
-    {{-- Custom font style --}}
-    <link href="/assets/fonts/montserrat.css" rel="stylesheet" type="text/css">
-    <link href="/assets/fonts/kaushan-script.css" rel='stylesheet' type='text/css'>
-    <link href="/assets/fonts/droid-serif.css" rel='stylesheet' type='text/css'>
-    <link href="/assets/fonts/roboto-slab.css" rel='stylesheet' type='text/css'>
-
     <!-- Custom styles for this template -->
     <link href="/assets/css/miporto.css" rel="stylesheet">
+    <link href="/assets/css/miporto-responsive.css" rel="stylesheet">
   </head>
   <body>
     <header>
