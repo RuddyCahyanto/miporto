@@ -1,3 +1,19 @@
+body{
+  position: relative;
+}
+section .row{
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.custom-heading h2{
+  font-family: "Showcard Gothic", serif;
+  color: #1E025B;
+}
+.custom-heading-line hr{
+  border: 2px solid #1E025B;
+  border-radius: 2px;
+}
 /* CUSTOMIZE NAVBAR */
 .navbar {
   background-color: #1E025B !important;
@@ -21,18 +37,18 @@
 }
 
 /* Change navbar styling on scroll */
-.navbar.active .navbar-brand{
+.navbar.scrolled .navbar-brand{
   font-size: 1.25em;
   transition: all 0.3s;
 }
-.navbar.active .navbar-brand img{
+.navbar.scrolled .navbar-brand img{
   width: 140px;
   transition: all 0.3s;
 }
 /* END OF CUSTOMIZE NAVBAR */
 
 /* CUSTOMIZE CAROUSEL */
-.slider-section .slider-container{
+#carousel-section .slider-container{
   margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,21 +58,19 @@
   align-items: center;
   padding-left: 7%;
 }
-.slider-section .detail-box{
+#carousel-section .detail-box{
   width: 45%;
   z-index: 4;
   color: #ffffff;
 }
-.slider-section .detail-box h1{
-  text-transform: uppercase;
-  font-weight: bold;
+#carousel-section .detail-box h1{
   font-size: 3rem;
 }
-.slider-section .detail-box p{
+#carousel-section .detail-box p{
   width: 75%;
   margin-top: 15px;
 }
-.slider-section .detail-box .slider-link{
+#carousel-section .detail-box .slider-link{
   display: inline-block;
   padding: 10px 35px;
   border: 1px solid #fff;
@@ -65,32 +79,32 @@
   border-radius: 25px;
   margin-top: 35px;
 }
-.slider-section .detail-box .slider-link:hover{
+#carousel-section .detail-box .slider-link:hover{
   background-color: #fff;
   color: black;
   text-decoration: none;
   font-weight: bold;
 }
-.slider-section .img-box{
+#carousel-section .img-box{
   width: 100%;
   margin-left: -17%;
   position: relative;
   z-index: 2;
 }
-.slider-section .img-box img{
+#carousel-section .img-box img{
   width: 100%;
 }
-.slider-section .slider-bg-container{
+#carousel-section .slider-bg-container{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #a454fd, #2b05df);
+  background: linear-gradient(155deg, #2b05df, #ffd369);
   z-index: 3;
   -webkit-clip-path: polygon(0 0, 60% 0, 37% 100%, 0% 100%);
           clip-path: polygon(0 0, 60% 0, 37% 100%, 0% 100%);
 }
-.slider-section .carousel-control-prev,
-.slider-section .carousel-control-next{
+#carousel-section .carousel-control-prev,
+#carousel-section .carousel-control-next{
   left: 47.6%;
   width: 50px;
   height: 50px;
@@ -101,74 +115,144 @@
   opacity: 1;
   border-radius: 100%;
 }
-.slider-section .carousel-control-prev{
+#carousel-section .carousel-control-prev{
   background-image: url(/assets/img/prev.png);
   background-color: #fff;
   top: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
-.slider-section .carousel-control-next{
+#carousel-section .carousel-control-next{
   background-image: url(/assets/img/next.png);
   background-color: #2e02fe;
   top: calc(50% - 30px);
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
-.slider-section .carousel-control-prev:hover{
+#carousel-section .carousel-control-prev:hover{
   background-color: #fff1cf;
 }
-.slider-section .carousel-control-next:hover{
+#carousel-section .carousel-control-next:hover{
   background-color: #ffd369;
 }
 /* END OF CUSTOMIZE CAROUSEL */
 
 /* ABOUT SECTION */
-.about-section{
-  font-family: "Poppins", sans-serif;
+#about-section{
+  background: #dee3e2;
 }
-.about-section .row{
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.about-section a{
+#about-section a{
   display: inline-block;
   padding: 8px 25px;
-  background-color: #ffd369;
   border: 1px solid #ffd369;
-  color: #fff;
+  color: #1E025B;
   border-radius: 25px;
-  margin-top: 45px;
 }
-.about-section a:hover{
-  background-color: transparent;
+#about-section a:hover{
+  background-color: #ffd369;
   color: #000;
   text-decoration: none;
   font-weight: bold;
 }
-.about-section p{
-  margin-top: 45px;
-}
-.about-section h6{
-  text-transform: uppercase;
-  color: #bdbbbb;
-  font-weight: bold;
-  margin-top: 45px;
-}
-.about-section h2{
-  text-transform: uppercase;
-  font-weight: bold;
-  background: #fff;
-  display: inline;
-  padding-right: 20px;
-}
-.about-section .right-line{
-  background: #ffd369;
-  position: relative;
-  margin-top: -17px;
-  height: 2px;
-  width: 50%;
-  z-index: -1;
-}
 /* END OF ABOUT SECTION */
+
+/* PORTFOLIO SECTION */
+#portfolio-section{
+  background: #f4f4f4;
+}
+#portfolio-section .portfolio-item .portfolio-link {
+  position: relative;
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+#portfolio-section .portfolio-item .portfolio-link .portfolio-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all ease 0.5s;
+  opacity: 0;
+  background: rgba(254, 209, 54, 0.9);
+}
+#portfolio-section .portfolio-item .portfolio-link .portfolio-hover:hover {
+  opacity: 1;
+}
+
+/* #portfolio-section .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 20px;
+  margin-top: -12px;
+  text-align: center;
+  color: white;
+} */
+
+/* #portfolio-section .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+  margin-top: -12px;
+} */
+
+/* #portfolio-section .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio-section .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+  margin: 0;
+} */
+
+#portfolio-section .portfolio-item .portfolio-caption {
+  max-width: 400px;
+  background-color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+  margin: 0;
+  text-transform: none;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+  font-size: 16px;
+  font-style: italic;
+  margin: 0;
+  font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#portfolio * {
+  z-index: 2;
+}
+/* END OF PORTFOLIO SECTION */
+
+/* INFO SECTION */
+#info-section{
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #1E025B;
+  color: #fff;
+}
+#info-section .info-social{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+#info-section .info-social img{
+  width: 40px;
+  padding: 7px;
+  border-radius: 12px;
+  background: #fff;
+}
+#info-section .info-social img:hover{
+  background: #ffd369;
+}
+/* END OF INFO SECTION */
+
+/* FOOTER SECTION */
+#footer-section p{
+  color: #292929;
+}
+#footer-section a{
+  color: #015668;
+}
+/* END OF FOOTER SECTION */

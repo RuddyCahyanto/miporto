@@ -20,22 +20,21 @@
       @include('layouts.navbar')
     </header>
 
-    <main role="main" >
+    <main role="main" data-spy="scroll" data-target=".navbar-nav">
 
       @yield('content')
-
+      @include('layouts.footer')
     </main>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
     <script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script>
-    <script src="/assets/js/popper.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
-    {{-- <script src="/assets/js/bootstrap.bundle.min.js"></script> --}}
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="/assets/js/holder.min.js"></script>
+    {{-- <script src="/assets/js/popper.min.js" type="text/javascript"> --}}
+
+    </script>
     {{-- Custom style for js --}}
     <script src="/assets/js/miporto.js" type="text/javascript">
 
